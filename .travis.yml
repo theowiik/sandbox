@@ -1,12 +1,12 @@
 language: java
 
 jdk:
-  - openjdk13
+  - openjdk8
 
 before_script:
     - chmod a+x gradlew
 
-script: ./gradlew build
+sccript: ./gradlew build
 
 notifications:
     email: false
