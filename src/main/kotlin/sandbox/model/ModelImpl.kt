@@ -1,12 +1,15 @@
 package sandbox.model
 
+import sandbox.model.materials.rigidbodies.RigidBody
+import sandbox.model.materials.rigidbodies.Sand
+
 /**
  * Implementation of the IModel interface.
  *
  * @see IModel
  */
 class ModelImpl() : IModel {
-  private val world = mutableListOf<MutableList<RigidBody>>()
+  private val world = mutableListOf<MutableList<Pixel>>()
 
   init {
     initWorld()
@@ -20,15 +23,21 @@ class ModelImpl() : IModel {
     val height = 10
 
     for (h in 0..height) {
-      val tempRow = mutableListOf<RigidBody>()
+      val tempRow = mutableListOf<Pixel>()
+
       for (w in 0..width) {
-        tempRow.add(RigidBody(Vector(0.0, 0.0)))
+        tempRow.add(Pixel())
+
+        if ((0..10).random() == 1) {
+          tempRow[w].content = Sand()
+        }
       }
+
       world.add(tempRow)
     }
   }
 
-  override fun getWorld(): List<List<RigidBody>> {
+  override fun getWorld(): List<List<Pixel>> {
     return world
   }
 }
