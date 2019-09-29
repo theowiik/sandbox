@@ -1,4 +1,4 @@
-package sandbox.core
+package sandbox.model
 
 import kotlin.math.sqrt
 
