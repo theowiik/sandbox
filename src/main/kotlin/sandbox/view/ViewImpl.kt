@@ -1,5 +1,6 @@
 package sandbox.view
 
+import javafx.scene.canvas.GraphicsContext
 import sandbox.model.IModel
 
 /**
@@ -7,7 +8,11 @@ import sandbox.model.IModel
  *
  * @see IView
  */
-class ViewImpl(private val model: IModel) : IView {
+class ViewImpl(
+    private val model: IModel,
+    private var graphicsContext: GraphicsContext? = null
+) : IView {
+
   override fun repaint() {
     for (row in model.getWorld()) {
       for (pixel in row) {
