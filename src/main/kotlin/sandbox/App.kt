@@ -1,27 +1,20 @@
 package sandbox
 
+import javafx.application.Application
+import javafx.stage.Stage
 import sandbox.model.IModel
 import sandbox.model.ModelImpl
 import sandbox.view.IView
 import sandbox.view.ViewImpl
 
-class App {
-  private val model: IModel
-  private val view: IView
+class App : Application() {
+  override fun start(primaryStage: Stage) {
+    val model: IModel = ModelImpl()
+    val view: IView = ViewImpl(model)
 
-  init {
-    model = ModelImpl()
-    view = ViewImpl(model)
-  }
-
-  fun start() {
-    for (i in 0..100) {
-      view.repaint()
-    }
   }
 }
 
-fun main() {
-  val app = App()
-  app.start()
+fun main(args: Array<String>) {
+  Application.launch(App::class.java, *args)
 }
