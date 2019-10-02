@@ -1,8 +1,11 @@
 package sandbox.model
 
-import sandbox.model.materials.Material
+import sandbox.model.materials.IMaterial
 
-class Pixel(var content: Material? = null) {
+/**
+ * The pixel class is the container of a material.
+ */
+class Pixel(private var content: IMaterial? = null) {
 
   /**
    * Checks if pixel class is holding a material.
