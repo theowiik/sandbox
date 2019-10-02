@@ -10,5 +10,5 @@ interface IModel {
   /**
    * Returns a matrix of the world.
    */
-  fun getWorld(): List<List<Pixel>>
+  fun getWorld(): World
 }
