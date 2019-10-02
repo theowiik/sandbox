@@ -1,15 +1,14 @@
 package sandbox.model.materials.rigidbodies
 
 import sandbox.model.Vector
-import sandbox.model.materials.Material
+import sandbox.model.materials.IMaterial
 
 /**
  * Rigid body based on unity's "Rigidbody" class.
  */
 abstract class RigidBody (
-    private val velocity: Vector = Vector(0.0, 0.0),
-    val name: String
-) : Material {
+    private val velocity: Vector = Vector(0.0, 0.0)
+) : IMaterial {
 
   /**
    * Adds a force to the rigid body.
