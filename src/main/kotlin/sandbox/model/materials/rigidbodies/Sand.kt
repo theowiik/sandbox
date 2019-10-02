@@ -5,11 +5,6 @@ package sandbox.model.materials.rigidbodies
  *
  * @see RigidBody
  */
-class Sand() : RigidBody(
-    name = "Sand"
-) {
-
-  override fun name(): String {
-    return name
-  }
+class Sand() : RigidBody() {
+  override val name: String = "Sand"
 }
