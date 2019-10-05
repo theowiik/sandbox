@@ -3,6 +3,7 @@ package sandbox.controller.components
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.canvas.Canvas
+import javafx.scene.canvas.GraphicsContext
 import javafx.scene.layout.AnchorPane
 import sandbox.controller.IController
 import sandbox.model.IModel
@@ -27,6 +28,15 @@ class SandboxPane(
       it.setController(this)
       it.load()
     }
+  }
+
+  /**
+   * Returns the graphics context the world is drawn on.
+   *
+   * @return the graphics context the world is drawn on.
+   */
+  fun getGraphicsContext(): GraphicsContext? {
+    return world?.graphicsContext2D
   }
 
   /**
