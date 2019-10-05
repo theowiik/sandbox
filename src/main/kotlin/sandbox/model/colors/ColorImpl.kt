@@ -6,9 +6,10 @@ package sandbox.model.colors
  * @see IColor
  */
 class ColorImpl(
-    red: Int = 255,
-    green: Int = 0,
-    blue: Int = 255
+    red: Int = 0xFF,
+    green: Int = 0xFF,
+    blue: Int = 0xFF,
+    alpha: Int = 0xFF
 ) : IColor {
 
   private val maxValue = 255;
@@ -25,6 +26,11 @@ class ColorImpl(
     }
 
   override var red = red
+    set(value) {
+      field = getClosestLegalColor(value)
+    }
+
+  override var alpha = alpha
     set(value) {
       field = getClosestLegalColor(value)
     }
