@@ -1,5 +1,7 @@
 package sandbox.model
 
+import sandbox.model.materials.rigidbodies.Sand
+
 /**
  * The world class is what contains all pixels (that holds materials).
  */
@@ -11,7 +13,7 @@ class World() {
   private val matrix: MutableList<MutableList<Pixel>>
 
   init {
-    matrix = generateWorld(10, 10);
+    matrix = generateWorld(720, 720);
   }
 
   /**
@@ -46,7 +48,7 @@ class World() {
     if (width < 1) throw IllegalArgumentException("Width must be greater than 0.")
 
     val row = mutableListOf<Pixel>()
-    for (r in 0..width) row.add(Pixel())
+    for (r in 0..width) row.add(Pixel(Sand()))
 
     return row
   }

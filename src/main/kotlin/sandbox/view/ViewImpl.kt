@@ -21,7 +21,8 @@ class ViewImpl(
   override fun repaint() {
     println("repainting")
     graphicsContext?.clearRect(0.0, 0.0, 20.0, 20.0)
-    val fxImage: Image = ImageService.colorsToFXImage(model.getWorldColors())
+    val worldColors = model.getWorldColors()
+    val fxImage: Image = ImageService.colorsToFXImage(worldColors)
     graphicsContext?.drawImage(fxImage, 0.0, 0.0)
   }
 }

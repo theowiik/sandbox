@@ -19,7 +19,7 @@ class SandboxPane(
 ) : AnchorPane() {
 
   @FXML
-  private var world: Canvas? = null
+  private var worldCanvas: Canvas? = null
 
   init {
     val scenePath = findScene("root.fxml")
@@ -36,7 +36,7 @@ class SandboxPane(
    * @return the graphics context the world is drawn on.
    */
   fun getGraphicsContext(): GraphicsContext? {
-    return world?.graphicsContext2D
+    return worldCanvas?.graphicsContext2D
   }
 
   /**

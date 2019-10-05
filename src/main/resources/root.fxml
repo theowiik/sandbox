@@ -4,10 +4,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Canvas height="200.0" width="200.0" />
+      <Canvas fx:id="worldCanvas" height="286.0" width="419.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sandbox" AnchorPane.bottomAnchor="32.0" AnchorPane.rightAnchor="32.0" />
    </children>
 </fx:root>
