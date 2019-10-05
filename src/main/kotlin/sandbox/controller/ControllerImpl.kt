@@ -1,6 +1,7 @@
 package sandbox.controller
 
 import javafx.scene.Scene
+import javafx.scene.input.KeyCode
 import javafx.stage.Stage
 import sandbox.controller.components.SandboxPane
 import sandbox.model.IModel
@@ -25,6 +26,19 @@ class ControllerImpl(
     val scene = Scene(sandboxPane, 1280.0, 720.0)
     stage.scene = scene
     stage.title = "Sandbox"
+
+    bindDebuggingButtons(scene)
+  }
+
+  // TODO: Only for dev
+  private fun bindDebuggingButtons(scene: Scene) {
+    scene.setOnKeyPressed { e ->
+      run {
+        if (e.code == KeyCode.RIGHT) {
+          view.repaint()
+        }
+      }
+    }
   }
 
   override fun run() {
