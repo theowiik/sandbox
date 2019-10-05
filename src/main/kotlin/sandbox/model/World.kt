@@ -56,4 +56,13 @@ class World() {
    */
   fun update() {
   }
+
+  /**
+   * Returns a matrix of the pixels in the world.
+   *
+   * @return a matrix of the pixels in the world.
+   */
+  fun getPixels(): List<List<Pixel>> {
+    return matrix
+  }
 }
