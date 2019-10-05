@@ -10,9 +10,8 @@ import sandbox.model.IModel
  */
 class ViewImpl(
     private val model: IModel,
-    private var graphicsContext: GraphicsContext? = null
+    override var graphicsContext: GraphicsContext? = null
 ) : IView {
-
   override fun repaint() {
   }
 }
