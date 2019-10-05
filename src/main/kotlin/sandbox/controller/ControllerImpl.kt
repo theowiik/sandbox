@@ -1,5 +1,6 @@
 package sandbox.controller
 
+import javafx.scene.Scene
 import javafx.stage.Stage
 import sandbox.controller.components.SandboxPane
 import sandbox.model.IModel
@@ -16,6 +17,12 @@ class ControllerImpl(
     private val stage: Stage
 ) : IController {
   private val sandboxPane: SandboxPane = SandboxPane(model, this)
+
+  init {
+    val scene = Scene(sandboxPane, 1280.0, 720.0)
+    stage.scene = scene
+    stage.title = "Sandbox"
+  }
 
   override fun run() {
     stage.show()
