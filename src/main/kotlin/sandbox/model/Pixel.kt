@@ -25,6 +25,7 @@ class Pixel(
    * holding a material.
    */
   fun getColor(): IColor {
+    // TODO: Do not return the same reference to the color.
     return content?.color ?: ColorImpl(0, 0, 0, 0)
   }
 }
