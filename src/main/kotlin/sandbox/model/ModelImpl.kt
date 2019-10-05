@@ -1,5 +1,6 @@
 package sandbox.model
 
+import sandbox.model.colors.IColor
 import sandbox.model.materials.rigidbodies.RigidBody
 import sandbox.model.materials.rigidbodies.Sand
 
@@ -11,7 +12,13 @@ import sandbox.model.materials.rigidbodies.Sand
 class ModelImpl() : IModel {
   private val world: World = World()
 
-  override fun getWorld(): World {
-    return world
+  override fun getWorldColors(): List<List<IColor>> {
+    var output = listOf<IColor>()
+
+    for (row in world.matrix) {
+      for (pixel in row) {
+
+      }
+    }
   }
 }

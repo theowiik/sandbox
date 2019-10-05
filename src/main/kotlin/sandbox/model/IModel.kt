@@ -1,5 +1,6 @@
 package sandbox.model
 
+import sandbox.model.colors.IColor
 import sandbox.model.materials.rigidbodies.RigidBody
 
 /**
@@ -8,7 +9,7 @@ import sandbox.model.materials.rigidbodies.RigidBody
 interface IModel {
 
   /**
-   * Returns a matrix of the world.
+   * Returns a representation of the world. It is represented by the materials colors.
    */
-  fun getWorld(): World
+  fun getWorldColors(): List<List<IColor>>
 }
