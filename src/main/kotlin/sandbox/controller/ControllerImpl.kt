@@ -19,6 +19,9 @@ class ControllerImpl(
   private val sandboxPane: SandboxPane = SandboxPane(model, this)
 
   init {
+    view.graphicsContext = sandboxPane.world?.graphicsContext2D
+
+    // Setup scene
     val scene = Scene(sandboxPane, 1280.0, 720.0)
     stage.scene = scene
     stage.title = "Sandbox"
