@@ -1,6 +1,8 @@
 package sandbox.controller.components
 
+import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
+import javafx.scene.canvas.Canvas
 import javafx.scene.layout.AnchorPane
 import sandbox.controller.IController
 import sandbox.model.IModel
@@ -14,6 +16,10 @@ class SandboxPane(
     private val model: IModel,
     private val controller: IController
 ) : AnchorPane() {
+
+  @FXML
+  private var world: Canvas? = null
+
   init {
     val scenePath = findScene("root.fxml")
     val loader: FXMLLoader = FXMLLoader(scenePath).also {
