@@ -13,8 +13,6 @@ class SandboxPane(
     private val model: IModel,
     private val controller: IController
 ) : AnchorPane() {
-  private val sandboxPane: SandboxPane = SandboxPane(model, controller)
-
   init {
     val scenePath: URL = URL("root.fxml")
     val loader = FXMLLoader(scenePath)
