@@ -6,8 +6,12 @@ import sandbox.model.materials.IMaterial
 /**
  * Rigid body based on unity's "Rigidbody" class.
  */
-abstract class RigidBody (
-    private val velocity: Vector = Vector(0.0, 0.0)
+abstract class RigidBody(
+
+    /**
+     * Velocity in m/s.
+     */
+    val velocity: Vector = Vector(1.0, 0.0)
 ) : IMaterial {
 
   /**
@@ -18,5 +22,11 @@ abstract class RigidBody (
   fun addForce(force: Vector) {
     velocity.x += force.x
     velocity.y += force.y
+  }
+
+  /**
+   * Moves the rigid body with its velocity vector.
+   */
+  fun move() {
   }
 }

@@ -13,7 +13,7 @@ class World() {
   private val matrix: MutableList<MutableList<Pixel>>
 
   init {
-    matrix = generateWorld(720, 720);
+    matrix = generateWorld(720, 720)
   }
 
   /**
@@ -57,6 +57,14 @@ class World() {
    * Updates the world.
    */
   fun update() {
+    for (row in matrix) {
+      for (pixel in row) {
+        pixel.moveRigidBody()
+
+        pixel.rigidBodyPos.x % pixel.pixelLength
+
+      }
+    }
   }
 
   /**
