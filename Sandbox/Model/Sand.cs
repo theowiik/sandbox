@@ -1,6 +1,6 @@
 namespace Sandbox.Model;
 
-public class SampleModel
+public class Sand
 {
     
 }
