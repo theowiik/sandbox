@@ -1,6 +1,5 @@
 namespace Sandbox.Model;
 
-public class Sand
+public sealed class Sand
 {
-    
 }
