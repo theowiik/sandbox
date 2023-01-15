@@ -8,5 +8,6 @@ public sealed class WorldTest
     public void SampleTest()
     {
         var world = new World();
+        Assert.Fail();
     }
 }
